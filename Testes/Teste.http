@@ -1,0 +1,24 @@
+### Cadastrar novo registro de folha de pagamento
+POST http://localhost:5159/api/folha/cadastrar
+Content-Type: application/json
+
+{
+  "NomeFuncionario": "Ana Souza",
+  "CPF": "123.456.789-00",
+  "Mes": 10,
+  "Ano": 2025,
+  "HorasTrabalhadas": 160,
+  "ValorHora": 60
+}
+
+### Obter todos os registros de folha de pagamento
+GET http://localhost:5159/api/folha/listar
+
+### Obter registro de folha de pagamento por CPF, mês e ano
+GET http://localhost:5159/api/folha/buscar/123.456.789-00/11/2025
+
+### Deletar registro de folha de pagamento
+DELETE http://localhost:5159/api/folha/deletar/1
+
+### Listar o total de salários líquidos pagos 
+GET http://localhost:5159/api/folha/total-liquido
